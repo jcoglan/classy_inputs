@@ -1,0 +1,21 @@
+== class_inputs
+
+This is a super-simple view extension for Rails. It just adds helpful class names
+to all Rails-generated +input+ tags to make it easier to style them. So, by default
+Rails gives you:
+
+  text_field_tag(:foo, :class => 'something')
+  # => <input class="something" id="foo" name="foo" type="text" />
+  
+  f.check_box(:bar)
+  # => <input id="record_bar" name="record[bar]" type="checkbox" value="1" />
+
+With classy_inputs installed, you get:
+
+  text_field_tag(:foo, :class => 'something')
+  # => <input class="something text" id="foo" name="foo" type="text" />
+  
+  f.check_box(:bar)
+  # => <input class="checkbox" id="record_bar" name="record[bar]" type="checkbox" value="1" />
+
+Copyright (c) 2008 James Coglan, released under the MIT license
